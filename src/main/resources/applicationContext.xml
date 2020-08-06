@@ -10,4 +10,8 @@
     <bean id="musicBean"
           class="les1.ClassicalMusic">
     </bean>
+
+    <bean id="podcastBean"
+          class="les1.ITPodcast">
+    </bean>
 </beans>

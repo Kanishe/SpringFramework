@@ -11,6 +11,13 @@ public class SpringTest {
         MusicPlayer musicPlayer = new MusicPlayer(music);
         musicPlayer.playMusic();
 
+
+
+        Podcast podcast = applicationContext.getBean("podcastBean",Podcast.class);
+
+        PodcastPlayer podcastPlayer = new PodcastPlayer(podcast);
+        podcastPlayer.playPodcast();
+
         applicationContext.close();
     }
 }
