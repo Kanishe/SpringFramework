@@ -6,9 +6,11 @@ public class SpringTest {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        TestBean testBean = applicationContext.getBean("testBean",TestBean.class);
+        Music music = applicationContext.getBean("musicBean",Music.class);
 
-        System.out.println(testBean.getName());
+        MusicPlayer musicPlayer = new MusicPlayer(music);
+        musicPlayer.playMusic();
+
         applicationContext.close();
     }
 }
