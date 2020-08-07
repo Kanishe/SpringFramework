@@ -7,11 +7,45 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="musicBean"
-          class="les1.ClassicalMusic">
-    </bean>
+<!--lesson 6 add dependency with the use Setters-->
 
-    <bean id="podcastBean"
-          class="les1.ITPodcast">
-    </bean>
+        <bean id="musicBean"
+              class="les1.ClassicalMusic">
+        </bean>
+
+        <bean id="musicPlayer"
+              class="les1.MusicPlayer">
+            <property name="music" ref="musicBean"/>
+        </bean>
+
+        <bean id="podcastPlayer"
+              class="les1.PodcastPlayer">
+            <property name="podcast" ref="podcastBean"/>
+        </bean>
+
+        <bean id="podcastBean"
+              class="les1.ITPodcast">
+        </bean>
+
+
+
+<!--    <bean id="musicBean"-->
+<!--          class="les1.ClassicalMusic">-->
+<!--    </bean>-->
+
+<!--    <bean id="musicPlayer"-->
+<!--          class="les1.MusicPlayer">-->
+<!--        <constructor-arg ref="musicBean"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="podcastPlayer"-->
+<!--          class="les1.PodcastPlayer">-->
+<!--        <constructor-arg ref="podcastBean"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="podcastBean"-->
+<!--          class="les1.ITPodcast">-->
+<!--    </bean>-->
+
+
 </beans>

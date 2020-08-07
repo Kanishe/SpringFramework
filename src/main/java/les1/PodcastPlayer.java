@@ -7,6 +7,14 @@ public class PodcastPlayer {
         this.podcast = podcast;
     }
 
+    public PodcastPlayer(){
+
+    }
+
+    public void setPodcast(Podcast podcast) {
+        this.podcast = podcast;
+    }
+
     public void playPodcast(){
         System.out.println("Podcast play: " + podcast.getPodcast());
     }
