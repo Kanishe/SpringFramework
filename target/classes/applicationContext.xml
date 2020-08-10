@@ -7,25 +7,32 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+<!--  lesson 9 add  scan component annotation -->
+    <context:component-scan base-package="les1"/>
+
+
+
+
+
 <!--lesson 6 add dependency with the use Setters-->
 
-        <bean id="musicBean"
-              class="les1.ClassicalMusic">
-        </bean>
+<!--        <bean id="musicBean"-->
+<!--              class="les1.ClassicalMusic">-->
+<!--        </bean>-->
 
-        <bean id="musicPlayer"
-              class="les1.MusicPlayer">
-            <property name="music" ref="musicBean"/>
-        </bean>
+<!--        <bean id="musicPlayer"-->
+<!--              class="les1.MusicPlayer">-->
+<!--            <property name="music" ref="musicBean"/>-->
+<!--        </bean>-->
 
-        <bean id="podcastPlayer"
-              class="les1.PodcastPlayer">
-            <property name="podcast" ref="podcastBean"/>
-        </bean>
+<!--        <bean id="podcastPlayer"-->
+<!--              class="les1.PodcastPlayer">-->
+<!--            <property name="podcast" ref="podcastBean"/>-->
+<!--        </bean>-->
 
-        <bean id="podcastBean"
-              class="les1.ITPodcast">
-        </bean>
+<!--        <bean id="podcastBean"-->
+<!--              class="les1.ITPodcast">-->
+<!--        </bean>-->
 
 
 
