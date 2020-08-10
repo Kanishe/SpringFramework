@@ -5,16 +5,29 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringTest {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-//Lesson9
+//Lesson10
 
-        Music music = applicationContext.getBean("classicalMusic",Music.class);
-        MusicPlayer musicPlayer = new MusicPlayer(music);
+        MusicPlayer musicPlayer = applicationContext.getBean("musicPlayer",MusicPlayer.class);
         musicPlayer.playMusic();
 
-        Podcast podcast = applicationContext.getBean("itPodcast", Podcast.class);
-
-        PodcastPlayer podcastPlayer = new PodcastPlayer(podcast);
+        PodcastPlayer podcastPlayer = applicationContext.getBean("podcastPlayer", PodcastPlayer.class);
         podcastPlayer.playPodcast();
+
+//Lesson10
+
+
+
+
+        //Lesson9
+
+//        Music music = applicationContext.getBean("classicalMusic",Music.class);
+//        MusicPlayer musicPlayer = new MusicPlayer(music);
+//        musicPlayer.playMusic();
+//
+//        Podcast podcast = applicationContext.getBean("itPodcast", Podcast.class);
+//
+//        PodcastPlayer podcastPlayer = new PodcastPlayer(podcast);
+//        podcastPlayer.playPodcast();
 
 //Lesson9
 
